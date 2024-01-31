@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="Adriatik Berdufi" />
     <title>Document</title>
-    <!-- 
-      Link Font Awesome 
+    <!-- Link Font Awesome 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css"> 
     -->
-
+    <!-- Link icon Boostrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css"> 
+    
     <!-- BootStrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <!-- Link CSS -->
     <link rel="stylesheet" href="./css/style.css" />
     <!-- Vue -->
@@ -25,8 +25,47 @@
     <header></header>
 
     <main >
-      <div class="container" id="app">
-        <h1>{{title}}</h1>
+      <div class="container text-center mt-5 text-primary" id="app" >
+        <h1 class="display-1">{{title}}</h1>
+        <div class="card w-50 m-auto box" >
+          <div class="card-header py-3">
+            <h5 class="text-success">Add a new Todo</h4>
+            <input class="form-control w-75 m-auto" type="text" value="">
+            <button type="button" class="btn btn-primary mt-3"><i class="bi bi-plus-circle pe-2"></i>Add</button>
+
+          </div>
+          <div class="card-body">
+            <ul class="px-3">
+              <li class="fs-5 p-2 m-2 d-flex justify-content-between  align-items-center">
+                <div class="w-75 text-start">text</div>
+                <div class="">
+                  <i class="bi bi-check2-circle p-2 text-success"></i>
+                  <i class="bi bi-trash3 p-2 text-danger"></i>
+                </div>
+              </li>
+              <li class="fs-5 p-2 m-2 d-flex justify-content-between ">
+                <div>text</div>
+                <div class="">
+                  <i class="bi bi-check2-circle p-2 text-danger-emphasis"></i>
+                  <i class="bi bi-trash3 p-2 text-danger"></i>
+                </div>
+              </li>
+              <li class="fs-5 p-2 m-2 d-flex justify-content-between ">
+                <div>text</div>
+                <div class="">icon</div>
+              </li>
+              <li class="fs-5 p-2 m-2 d-flex justify-content-between ">
+                <div>text</div>
+                <div class="">icon</div>
+              </li>
+              
+
+
+            </ul>
+            <button type="button" class="btn btn-danger mt-5"><i class="bi bi-trash3 pe-2"></i>Delete All</button>
+          </div>
+
+        </div>
 
       </div>
     
@@ -36,5 +75,5 @@
   
     
   </body>
-</html>
+
 

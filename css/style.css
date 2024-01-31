@@ -24,9 +24,6 @@ a {
 ul {
   list-style: none;
 }
-li {
-  display: inline-block;
-}
 body{
   background-color: rgba(212, 200, 184, 0.856);
 }
@@ -55,8 +52,13 @@ body{
 
 
 /** MAIN **/
-
-
+.box{
+  min-height: 560px;
+}
+.card-body li{
+  background-color: rgb(212, 212, 212);
+  border-radius: 0.5rem;
+}
 
 
 /** FOOTER **/
