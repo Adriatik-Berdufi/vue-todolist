@@ -3,31 +3,7 @@ const app = createApp({
     data(){
         return{
             title: 'Todo List',
-
-            todoList: [
-                {
-                    text: 'task1',
-                    done: true,
-                },
-                {
-                    text: 'task2',
-                    done: false,
-                },
-                {
-                    text: 'task3',
-                    done: true,
-                },
-                {
-                    text: 'task4',
-                    done: false,
-                },
-            ],
-            newItem: [
-                {
-                    text: '',
-                    done: false,
-                }
-            ],
+            newItem: [{text: '',done: false,}],
         };
     },
     methods: {
@@ -37,24 +13,11 @@ const app = createApp({
         this.todoList.push(newItemCopy);
         this.newItem.text = '';
       },
-      deleteItem(index){
-        this.todoList.splice(index,1);
-      },
-      doneItem(item){
-        if(item.done == false){
-            item.done = true;
-        }else{
-            item.done = false;
-        }
-        console.log(item);
-        return item;
-      },
+      deleteItem(index){this.todoList.splice(index,1);},
+      doneItem(item){item.done = item.done == false ? true : false;},
+      deleteAll(){this.todoList = [];},
        
     },
-    
-    mounted(){
-        
-        
-    },
+    mounted(){},
 });
 app.mount('#app');
