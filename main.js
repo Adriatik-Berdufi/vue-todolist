@@ -36,7 +36,10 @@ const app = createApp({
         if(newItemCopy.text.length == 0) return;
         this.todoList.push(newItemCopy);
         this.newItem.text = '';
-      }
+      },
+      deleteItem(index){
+        this.todoList.splice(index,1);
+      },
        
     },
     
