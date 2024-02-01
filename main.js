@@ -4,6 +4,7 @@ const app = createApp({
         return{
             title: 'Todo List',
             newItem: [{text: '',done: false,}],
+            todoList: [],
         };
     },
     methods: {
@@ -16,7 +17,6 @@ const app = createApp({
       deleteItem(index){this.todoList.splice(index,1);},
       doneItem(item){item.done = item.done == false ? true : false;},
       deleteAll(){this.todoList = [];},
-       
     },
     mounted(){},
 });
