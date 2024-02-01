@@ -3,7 +3,7 @@ const app = createApp({
     data(){
         return{
             title: 'Todo List',
-            newItem: [{text: '',done: false,}],
+            newItem: {text: '',done: false,},
             todoList: [],
         };
     },
