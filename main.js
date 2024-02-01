@@ -15,7 +15,7 @@ const app = createApp({
                 },
                 {
                     text: 'task3',
-                    done: false,
+                    done: true,
                 },
                 {
                     text: 'task4',
@@ -39,6 +39,15 @@ const app = createApp({
       },
       deleteItem(index){
         this.todoList.splice(index,1);
+      },
+      doneItem(item){
+        if(item.done == false){
+            item.done = true;
+        }else{
+            item.done = false;
+        }
+        console.log(item);
+        return item;
       },
        
     },
