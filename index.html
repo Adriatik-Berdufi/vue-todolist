@@ -30,7 +30,7 @@
         <div class="card w-50 m-auto box" >
           <div class="card-header py-3">
             <h5 class="text-success">Add a new Todo</h4>
-            <input v-model.trim="newItem.text" class="form-control w-75 m-auto" type="text" value="">
+            <input v-model.trim="newItem.text" @keyup.enter="saveNewItem" class="form-control w-75 m-auto" type="text" value="">
             <div>{{newItem.text}}</div>
             <button type="button" @click="saveNewItem()" class="btn btn-primary mt-3"><i class="bi bi-plus-circle pe-2"></i>Add</button>
 

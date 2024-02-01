@@ -33,7 +33,9 @@ const app = createApp({
     methods: {
       saveNewItem(){
         const newItemCopy = { ...this.newItem };
+        if(newItemCopy.text.length == 0) return;
         this.todoList.push(newItemCopy);
+        this.newItem.text = '';
       }
        
     },
